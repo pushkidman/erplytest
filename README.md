@@ -48,22 +48,22 @@ None
 **Return** __shortened for example purpose__
 ``` json
 {
-  [
-    {
-        "id": "1",
-        "name": "Batman Arkham City",
-        "price": "39.99"
-    },
-    {
-        "id": "2",
-        "name": "Dead By Daylight",
-        "price": "29.99"
-    },
-    {
-        "id": "16",
-        "name": "Cuphead",
-        "price": "19.99"
-    }
-]
+    [
+        {
+            "id": "1",
+            "name": "Batman Arkham City",
+            "price": "39.99"
+        },
+        {
+            "id": "2",
+            "name": "Dead By Daylight",
+            "price": "29.99"
+        },
+        {
+            "id": "16",
+            "name": "Cuphead",
+            "price": "19.99"
+        }
+    ]
 }
 ```
