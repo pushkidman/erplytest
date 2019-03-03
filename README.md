@@ -3,6 +3,10 @@
 ## Installation
 
 ## Dev notes
+Since this is a test task, some things were simplified at the cost of scalability.
+Several known issues:
+- Product price is kept in the same table as the product name. Ideally, there should be a separate table, e.g. **product_state**
+- For simplicity I kept basic app structure which Phalcon recommends. For scalability purposes this could be rebuilt into modular one (like Symfony or Laravel).
 
 ## Endpoints
 
