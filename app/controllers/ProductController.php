@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Lib\Exceptions\Http400Exception;
+use App\Lib\Exceptions\Http404Exception;
 use App\Lib\Exceptions\Http422Exception;
 use App\Lib\Exceptions\Http500Exception;
 use App\Services\ProductService;
