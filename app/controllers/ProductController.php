@@ -124,6 +124,11 @@ class ProductController extends ControllerBase {
      */
     public function searchAction($q) {
         try {
+            
+            if (strlen($q) < 3) {
+                throw new Http400Exception('Query string must be aat least 3 characters', self::ERROR_INVALID_REQUEST);
+            }
+            
             $products = $this->productService->search($q);
             return $products;
         } catch (ServiceException $e) {
