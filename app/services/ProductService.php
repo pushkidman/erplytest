@@ -70,7 +70,7 @@ class ProductService extends ServiceBase {
 
             if (!$update) {
                 throw new ServiceException(
-                    sprintf('Unable to create product: %s', $product->getMessages()[0]->__toString()), 
+                    sprintf('Unable to update product: %s', $product->getMessages()[0]->__toString()), 
                     self::ERROR_UNABLE_UPDATE_PRODUCT
                 );
             }

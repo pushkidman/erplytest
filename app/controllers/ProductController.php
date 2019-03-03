@@ -84,6 +84,7 @@ class ProductController extends ControllerBase {
         } catch (ServiceException $e) {
             switch ($e->getCode()) {
                 case ProductService::ERROR_PRODUCT_NOT_FOUND:
+                    throw new Http404Exception($e->getMessage(), $e->getCode(), $e);
                 case ProductService::ERROR_UNABLE_UPDATE_PRODUCT:
                     throw new Http422Exception($e->getMessage(), $e->getCode(), $e);
                 default:
@@ -108,8 +109,9 @@ class ProductController extends ControllerBase {
             return ['status' => 'OK'];
         } catch (ServiceException $e) {
             switch ($e->getCode()) {
-                case ProductService::ERROR_UNABLE_DELETE_PRODUCT:
                 case ProductService::ERROR_PRODUCT_NOT_FOUND:
+                    throw new Http404Exception($e->getMessage(), $e->getCode(), $e);
+                case ProductService::ERROR_UNABLE_DELETE_PRODUCT:
                     throw new Http422Exception($e->getMessage(), $e->getCode(), $e);
                 default:
                     throw new Http500Exception(_('Internal Server Error'), $e->getCode(), $e);
