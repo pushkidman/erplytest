@@ -1,6 +1,12 @@
 # Erply Test - Simple Rest API
 
+Simple Rest API written using Phalcon PHP Framework 3.4 and it's Micro app class.
+
 ## Installation
+- Import SQL dump (erply.sql)
+- Install Phalcon extension (this API is tested with 3.4) based on your OS and PHP version.
+Installation guides can be found here: https://phalcon.link/download
+- Modify `app/config/config.php` with your DB credentials and `baseUri`
 
 ## Dev notes
 Since this is a test task, some things were simplified at the cost of scalability.
