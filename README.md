@@ -15,20 +15,20 @@
 | POST | /api/product | Adds a new product |
 | PUT | /api/product/:id | Updates a product based on unique ID |
 | DELETE | /api/product/:id | Deletes a product based on unique ID |
-```
-    GET /api/product
-```
-**Description**
+
+#### GET /api/product
+
+##### Description
 Returns a list of products.
 
 ***
 
-**Parameters**
+##### Parameters
 None
 
 ***
 
-**Return format**
+##### Return format
 An array with the following keys and values:
 
 - **id** — unique ID.
@@ -37,15 +37,15 @@ An array with the following keys and values:
 
 ***
 
-**Errors**
+##### Errors
 None
 
 ***
 
-**Example**
+##### Example
 ***Request***
 
-    /api/products
+    /api/product
 
 ***Return***
 ``` json
