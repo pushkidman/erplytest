@@ -69,3 +69,48 @@ None
     ]
 }
 ```
+
+
+#### GET /api/product/search/:query
+
+##### Description
+Searches for products by name.
+
+***
+
+##### Parameters
+- **query** — A keyword to search for (required, >= 3 characters).
+
+***
+
+##### Return format
+An array with the following keys and values:
+
+- **id** — unique ID.
+- **name** — unique product name.
+- **price** — unique product price.
+
+***
+
+##### Errors
+- **400 Bad Request** — Missing or short query string.
+
+***
+
+##### Example
+***Request***
+
+    /api/product/search/batman
+
+***Return***
+``` json
+{
+    [
+        {
+            "id": "1",
+            "name": "Batman Arkham City",
+            "price": "39.99"
+        }
+    ]
+}
+```
