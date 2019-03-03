@@ -16,7 +16,7 @@
 | PUT | /api/product/:id | Updates a product based on unique ID |
 | DELETE | /api/product/:id | Deletes a product based on unique ID |
 
-#### GET /api/product
+### GET /api/product
 
 ##### Description
 Returns a list of products.
@@ -71,7 +71,7 @@ An array with the following keys and values:
 ```
 
 
-#### GET api/product/search/:query
+### GET api/product/search/:query
 
 ##### Description
 Searches for products by name.
@@ -118,7 +118,7 @@ An array with the following keys and values:
 
 
 
-#### POST api/product
+### POST api/product
 
 ##### Description
 Adds a new product.
@@ -168,7 +168,7 @@ An array with the following keys and values:
 ```
 
 
-#### PUT api/product/:id
+### PUT api/product/:id
 
 ##### Description
 Updates an existing product.
