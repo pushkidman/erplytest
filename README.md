@@ -8,25 +8,27 @@
 
 #### Product Resources
 
-- **<code>GET</code> /api/product**
-- **<code>GET</code> /api/product/search/:query**
-- **<code>PUT</code> /api/product/:id**
-- **<code>POST</code> /api/product**
-- **<code>DELETE</code> /api/product/:id**
-
+| Method | URL | Action |
+| ------ | ------ | ------ |
+| GET | /api/product | Retrieves all product list |
+| GET | /api/product/search/:query | Searches for products by ‘:query’ |
+| POST | /api/product | Adds a new product |
+| PUT | /api/product/:id | Updates a product based on unique ID |
+| DELETE | /api/product/:id | Deletes a product based on unique ID |
+```
     GET /api/product
-
-## Description
+```
+**Description**
 Returns a list of products.
 
 ***
 
-## Parameters
+**Parameters**
 None
 
 ***
 
-## Return format
+**Return format**
 An array with the following keys and values:
 
 - **id** — unique ID.
@@ -35,17 +37,17 @@ An array with the following keys and values:
 
 ***
 
-## Errors
+**Errors**
 None
 
 ***
 
-## Example
-**Request**
+**Example**
+***Request***
 
     /api/products
 
-**Return** __shortened for example purpose__
+***Return***
 ``` json
 {
     [
