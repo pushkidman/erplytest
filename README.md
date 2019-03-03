@@ -136,7 +136,7 @@ Essential information:
 An array with the following keys and values:
 
 - **status** - request result status.
-- **data** - inserted data.
+- **data:**
 ***name*** — unique product name.
 ***price*** — unique product price.
 ***id*** — unique ID.
@@ -145,7 +145,7 @@ An array with the following keys and values:
 
 ##### Errors
 - **400 Input parameters validation error** — Invalid input parameters.
-- **422 Unnable to create product** — Product name already exists.
+- **422 Unable to create product** — Product name already exists.
 - **500 Internal Server Error** — Internal server error.
 
 ***
@@ -187,10 +187,10 @@ The following parameters are required in the POST body:
 An array with the following keys and values:
 
 - **status** - request result status.
-- **data** - inserted data.
--- **name** — unique product name.
--- **price** — unique product price.
--- **id** — unique ID.
+- **data:**
+***name*** — unique product name.
+***price*** — unique product price.
+***id*** — unique ID.
 
 ***
 
@@ -216,5 +216,91 @@ An array with the following keys and values:
         "price": "9.99",
         "id": "17"
     }
+}
+```
+
+
+### POST api/product
+
+##### Description
+Adds a new product.
+
+***
+
+##### Parameters
+Essential information:
+- **name** — Product title.
+- **price** — Product price.
+
+***
+
+##### Return format
+An array with the following keys and values:
+
+- **status** - request result status.
+- **data:**
+***name*** — unique product name.
+***price*** — unique product price.
+***id*** — unique ID.
+
+***
+
+##### Errors
+- **400 Input parameters validation error** — Invalid input parameters.
+- **422 Unable to create product** — Product name already exists.
+- **500 Internal Server Error** — Internal server error.
+
+***
+
+##### Example
+***Request***
+
+    POST api/product?name=Bioshock&price=8.99
+
+***Return***
+``` json
+{
+    "status": "OK",
+    "data": {
+        "name": "Bioshock",
+        "price": "8.99",
+        "id": "17"
+    }
+}
+```
+
+
+### DELETE api/product/:id
+
+##### Description
+Deletes an existing product.
+
+***
+
+##### Parameters
+The application must provide the ID of the product to delete in the URL of the request.
+
+***
+
+##### Return format
+A JSON object containing **status**.
+
+***
+
+##### Errors
+- **404 Product not found** — Product with given ID not found.
+- **500 Internal Server Error** — Internal server error.
+
+***
+
+##### Example
+***Request***
+
+    DELETE api/product/17
+
+***Return***
+``` json
+{
+    "status": "OK"
 }
 ```
