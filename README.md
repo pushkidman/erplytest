@@ -144,8 +144,8 @@ An array with the following keys and values:
 ***
 
 ##### Errors
-- **400 Bad Request** — Invalid input parameters.
-- **422 Unprocessable Entity** — Product name already exists.
+- **400 Input parameters validation error** — Invalid input parameters.
+- **422 Unnable to create product** — Product name already exists.
 - **500 Internal Server Error** — Internal server error.
 
 ***
@@ -176,7 +176,8 @@ Updates an existing product.
 ***
 
 ##### Parameters
-Essential information:
+The application must provide the ID of the product to update in the URL of the request. 
+The following parameters are required in the POST body:
 - **name** — Product title.
 - **price** — Product price.
 
@@ -194,8 +195,9 @@ An array with the following keys and values:
 ***
 
 ##### Errors
-- **400 Bad Request** — Invalid input parameters.
-- **422 Unprocessable Entity** — Product name already exists.
+- **400 Input parameters validation error** — Invalid input parameters.
+- **404 Product not found** — Product with given ID not found.
+- **422 Unable to update product** — Product name already exists.
 - **500 Internal Server Error** — Internal server error.
 
 ***
