@@ -45,7 +45,7 @@ None
 ##### Example
 ***Request***
 
-    /api/product
+    api/product
 
 ***Return***
 ``` json
@@ -71,7 +71,7 @@ None
 ```
 
 
-#### GET /api/product/search/:query
+#### GET api/product/search/:query
 
 ##### Description
 Searches for products by name.
