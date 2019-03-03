@@ -137,9 +137,9 @@ An array with the following keys and values:
 
 - **status** - request result status.
 - **data** - inserted data.
--- **name** — unique product name.
--- **price** — unique product price.
--- **id** — unique ID.
+***name*** — unique product name.
+***price*** — unique product price.
+***id*** — unique ID.
 
 ***
 
